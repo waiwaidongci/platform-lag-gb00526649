@@ -38,7 +38,7 @@ SPEC = {
     "decision": "机电复核意见",
     "action": "提交复测安排",
     "modes": ["安排现场复测", "补采后重跑", "交班归档"],
-    "pages": ["站台排查总览", "声级与风机明细", "滞后扫描", "相关峰与缺测", "机电复核", "交班与导出"],
+    "pages": ["站台排查总览", "声级与风机明细", "滞后扫描", "相关峰与缺测", "机电复核", "交班与导出", "声级计基准换算"],
     "fields": [
         {"key": "platform", "label": "站台", "type": "string", "required": True},
         {"key": "fan_id", "label": "风机编号", "type": "string", "required": True},

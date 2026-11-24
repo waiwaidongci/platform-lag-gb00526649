@@ -19,4 +19,11 @@ export const workspace = {
   schedule: data => call('/schedules', data),
   disable: id => call(`/schedules/${id}/disable`, {}),
   download: (path, filename) => saveFile(path, session.token, filename),
+  calibration: () => call('/calibration/overview'),
+  calibrationComparisons: () => call('/calibration/comparisons'),
+  createMeter: data => call('/calibration/meters', data),
+  setBaseline: (id, is_baseline) => call(`/calibration/meters/${id}/baseline`, {is_baseline}),
+  submitComparisons: data => call('/calibration/comparisons', data),
+  withdrawComparison: (id, reason) => call(`/calibration/comparisons/${id}/withdraw`, {reason}),
+  publishCalibration: expected_fingerprint => call('/calibration/publish', {expected_fingerprint:expected_fingerprint || ''}),
 };
